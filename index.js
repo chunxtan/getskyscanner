@@ -73,7 +73,7 @@ app.get('/api/getAccommsDestId', async (req, res) => {
   }
 
   try {
-    const response = await fetch(url, fetchOptions);
+    const response = await fetch(url.href, fetchOptions);
     const returnRes = await response.json();
     res.json(returnRes);
   } catch(err) {
