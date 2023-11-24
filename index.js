@@ -1,11 +1,9 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import fetch from 'node-fetch';
-import cors from 'cors';
+const fetch = require('node-fetch');
+const cors = require('cors');
 
-dotenv.config();
+require('dotenv').config()
 
-const app = express()
+const app = require('express')();
 
 app.use(cors());
 app.use(express.json());
@@ -66,5 +64,3 @@ app.listen(port, (err, res) => {
         console.log('[INFO] Server Running on port:', port)
     }
 })
-
-export default app;
