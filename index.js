@@ -13,7 +13,6 @@ app.use(express.json());
 const KEY = process.env.EXPRESS_SKYSCANNER_API_KEY;
 
 app.post('/api/getCodes', async (req,res) => {
-  const KEY = process.env.EXPRESS_SKYSCANNER_API_KEY;
 
   const url = 'https://partners.api.skyscanner.net/apiservices/v3/autosuggest/flights';
 
@@ -67,3 +66,5 @@ app.listen(port, (err, res) => {
         console.log('[INFO] Server Running on port:', port)
     }
 })
+
+export default app;
